@@ -1,0 +1,6 @@
+# .sdf, stores information for Visual Studios Intellisense
+*.sdf
+
+# .suo, contains user preference configurations (hidden)
+*.suo
+
