@@ -1,3 +1,7 @@
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+
 # Visual Studio 2012
 # Base Project
 # sdf, stores information for Visual Studios Intellisense
@@ -21,3 +25,6 @@
 *.log
 *.lastbuildstate
 *.vcxproj.user
+
+SDK/
+Redist/
