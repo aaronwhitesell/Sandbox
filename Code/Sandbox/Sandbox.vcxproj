@@ -79,6 +79,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\game.h" />
+    <ClInclude Include="Engine\resourceHolder.h" />
+    <ClInclude Include="Engine\resourceIdentifiers.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Engine\resourceHolder.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

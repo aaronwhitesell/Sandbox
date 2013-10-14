@@ -32,5 +32,16 @@
     <ClInclude Include="Engine\game.h">
       <Filter>Header Files\Engine</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\resourceHolder.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\resourceIdentifiers.h">
+      <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Engine\resourceHolder.inl">
+      <Filter>Header Files\Engine</Filter>
+    </None>
   </ItemGroup>
 </Project>

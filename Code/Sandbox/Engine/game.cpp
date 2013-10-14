@@ -1,10 +1,10 @@
 #include "game.h"
+#include <iostream>
 
 const float Game::PlayerSpeed = 100.f;
 const sf::Time Game::TimePerFrame = sf::seconds(1.f/60.f);
 
 Game::Game() : mWindow(sf::VideoMode(640, 480), "SFML Application", sf::Style::Close)
-	, mTexture()
 	, mPlayer()
 	, mFont()
 	, mStatisticsText()
@@ -15,18 +15,21 @@ Game::Game() : mWindow(sf::VideoMode(640, 480), "SFML Application", sf::Style::C
 	, mIsMovingLeft(false)
 	, mIsMovingRight(false)
 {
-	if (!mTexture.loadFromFile("Textures/Eagle.png"))
+	try
 	{
-		// Handle loading error
+		mTextures.load(Textures::Airplane, "Textures/Eagle.png");
+		mFonts.load(Fonts::FPS, "Fonts/Sansation.ttf");
 	}
-	mPlayer.setTexture(mTexture);
+	catch (std::runtime_error& e)
+	{
+		std::cout << "Exception: " << e.what() << std::endl;
+		//return 1;
+	}
+
+	mPlayer.setTexture(mTextures.get(Textures::Airplane));
 	mPlayer.setPosition(100.f, 100.f);
 
-	if (!mFont.loadFromFile("Fonts/Sansation.ttf"))
-	{
-		// Handle loading error
-	}
-	mStatisticsText.setFont(mFont);
+	mStatisticsText.setFont(mFonts.get(Fonts::FPS));
 	mStatisticsText.setPosition(5.f, 5.f);
 	mStatisticsText.setCharacterSize(10);
 }

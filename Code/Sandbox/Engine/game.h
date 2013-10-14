@@ -1,6 +1,8 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include "resourceIdentifiers.h"
+#include "resourceHolder.h"
 #include <SFML/Graphics.hpp>
 
 class Game
@@ -22,8 +24,9 @@ private:
 	static const sf::Time	TimePerFrame;
 
 	sf::RenderWindow		mWindow;
-	sf::Texture				mTexture;
+	TextureHolder			mTextures;
 	sf::Sprite				mPlayer;
+	FontHolder				mFonts;
 	sf::Font				mFont;
 	sf::Text				mStatisticsText;
 	sf::Time				mStatisticsUpdateTime;
@@ -34,4 +37,5 @@ private:
 	bool					mIsMovingLeft;
 	bool					mIsMovingRight;
 };
+
 #endif
