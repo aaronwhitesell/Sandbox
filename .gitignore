@@ -26,5 +26,7 @@
 *.lastbuildstate
 *.vcxproj.user
 
+Code/Debug/
+Code/Release/
 SDK/
 Redist/

@@ -19,8 +19,10 @@ public:
 	Resource&				get(Identifier id);
 	const Resource&			get(Identifier id) const;
 
+
 private:
 	void					insertResource(Identifier, std::unique_ptr<Resource>);
+
 
 private:
 	std::map<Identifier, std::unique_ptr<Resource>> mResourceMap;

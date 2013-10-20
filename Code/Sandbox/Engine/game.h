@@ -1,15 +1,21 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "resourceIdentifiers.h"
-#include "resourceHolder.h"
-#include <SFML/Graphics.hpp>
+#include "world.h"
 
-class Game
+#include <SFML/System/Time.hpp>
+#include <SFML/Window/Keyboard.hpp>
+#include <SFML/Graphics/Text.hpp>
+#include <SFML/Graphics/Font.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
+
+
+class Game : private sf::NonCopyable
 {
 public:
 							Game();
 	void					run();
+
 
 private:
 	void					processEvents();
@@ -20,22 +26,15 @@ private:
 	void					handlePlayerInput(sf::Keyboard::Key, bool);
 
 private:
-	static const float		PlayerSpeed;
 	static const sf::Time	TimePerFrame;
 
 	sf::RenderWindow		mWindow;
-	TextureHolder			mTextures;
-	sf::Sprite				mPlayer;
-	FontHolder				mFonts;
+	World					mWorld;
+
 	sf::Font				mFont;
 	sf::Text				mStatisticsText;
 	sf::Time				mStatisticsUpdateTime;
-
 	std::size_t				mStatisticsNumFrames;
-	bool					mIsMovingUp;
-	bool					mIsMovingDown;
-	bool					mIsMovingLeft;
-	bool					mIsMovingRight;
 };
 
 #endif
