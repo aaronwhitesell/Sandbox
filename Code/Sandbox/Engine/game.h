@@ -2,9 +2,9 @@
 #define GAME_H
 
 #include "world.h"
+#include "player.h"
 
 #include <SFML/System/Time.hpp>
-#include <SFML/Window/Keyboard.hpp>
 #include <SFML/Graphics/Text.hpp>
 #include <SFML/Graphics/Font.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
@@ -21,15 +21,15 @@ private:
 	void					processEvents();
 	void					update(sf::Time);
 	void					render();
-
 	void					updateStatistics(sf::Time elapsedTime);
-	void					handlePlayerInput(sf::Keyboard::Key, bool);
+
 
 private:
 	static const sf::Time	TimePerFrame;
 
 	sf::RenderWindow		mWindow;
 	World					mWorld;
+	Player					mPlayer;
 
 	sf::Font				mFont;
 	sf::Text				mStatisticsText;

@@ -20,6 +20,8 @@ public:
 
 	virtual void			drawCurrent(sf::RenderTarget&, sf::RenderStates) const;
 
+	virtual unsigned int	getCategory() const;
+
 private:
 	Type					mType;
 	sf::Sprite				mSprite;

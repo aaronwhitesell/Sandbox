@@ -75,8 +75,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Engine\aircraft.cpp" />
+    <ClCompile Include="Engine\command.cpp" />
+    <ClCompile Include="Engine\commandQueue.cpp" />
     <ClCompile Include="Engine\entity.cpp" />
     <ClCompile Include="Engine\game.cpp" />
+    <ClCompile Include="Engine\player.cpp" />
     <ClCompile Include="Engine\sceneNode.cpp" />
     <ClCompile Include="Engine\spriteNode.cpp" />
     <ClCompile Include="Engine\world.cpp" />
@@ -84,8 +87,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\aircraft.h" />
+    <ClInclude Include="Engine\category.h" />
+    <ClInclude Include="Engine\command.h" />
+    <ClInclude Include="Engine\commandQueue.h" />
     <ClInclude Include="Engine\entity.h" />
     <ClInclude Include="Engine\game.h" />
+    <ClInclude Include="Engine\player.h" />
     <ClInclude Include="Engine\resourceHolder.h" />
     <ClInclude Include="Engine\resourceIdentifiers.h" />
     <ClInclude Include="Engine\sceneNode.h" />
