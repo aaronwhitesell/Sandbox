@@ -1,10 +1,12 @@
 #ifndef RESOURCE_IDENTIFIERS_H
 #define RESOURCE_IDENTIFIERS_H
 
+
 // Forward declaration of SFML classes
 namespace sf
 {
 		class Texture;
+		class Font;
 }
 
 // Resource ID for sf::Texture
@@ -15,6 +17,16 @@ namespace Textures
 		Eagle,
 		Raptor,
 		Desert,
+		TitleScreen,
+	};
+}
+
+// Resource ID for sf::Font
+namespace Fonts
+{
+	enum ID
+	{
+		Main,
 	};
 }
 
@@ -22,6 +34,7 @@ namespace Textures
 template <typename Resource, typename Identifier>
 class ResourceHolder;
 
-typedef ResourceHolder<sf::Texture, Textures::ID> TextureHolder;
+typedef ResourceHolder<sf::Texture, Textures::ID>	TextureHolder;
+typedef ResourceHolder<sf::Font, Fonts::ID>			FontHolder;
 
 #endif

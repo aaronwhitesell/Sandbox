@@ -1,16 +1,20 @@
-#include "Engine/game.h"
+#include "Engine/Application.h"
 
+#include <stdexcept>
 #include <iostream>
+
 
 int main()
 {
 	try
 	{
-		Game game;
-		game.run();
+		Application app;
+		app.run();
 	}
 	catch (std::exception& e)
 	{
 		std::cout << "\nEXCEPTION: " << e.what() << std::endl;
+		//char i;
+		//std::cin >> i;
 	}
 }

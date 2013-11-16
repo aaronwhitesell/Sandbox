@@ -75,28 +75,43 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Engine\aircraft.cpp" />
+    <ClCompile Include="Engine\application.cpp" />
     <ClCompile Include="Engine\command.cpp" />
     <ClCompile Include="Engine\commandQueue.cpp" />
     <ClCompile Include="Engine\entity.cpp" />
-    <ClCompile Include="Engine\game.cpp" />
+    <ClCompile Include="Engine\gameState.cpp" />
+    <ClCompile Include="Engine\menuState.cpp" />
+    <ClCompile Include="Engine\pauseState.cpp" />
     <ClCompile Include="Engine\player.cpp" />
     <ClCompile Include="Engine\sceneNode.cpp" />
     <ClCompile Include="Engine\spriteNode.cpp" />
+    <ClCompile Include="Engine\state.cpp" />
+    <ClCompile Include="Engine\stateStack.cpp" />
+    <ClCompile Include="Engine\titleState.cpp" />
+    <ClCompile Include="Engine\utility.cpp" />
     <ClCompile Include="Engine\world.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\aircraft.h" />
+    <ClInclude Include="Engine\application.h" />
     <ClInclude Include="Engine\category.h" />
     <ClInclude Include="Engine\command.h" />
     <ClInclude Include="Engine\commandQueue.h" />
     <ClInclude Include="Engine\entity.h" />
-    <ClInclude Include="Engine\game.h" />
+    <ClInclude Include="Engine\gameState.h" />
+    <ClInclude Include="Engine\menuState.h" />
+    <ClInclude Include="Engine\pauseState.h" />
     <ClInclude Include="Engine\player.h" />
     <ClInclude Include="Engine\resourceHolder.h" />
     <ClInclude Include="Engine\resourceIdentifiers.h" />
     <ClInclude Include="Engine\sceneNode.h" />
     <ClInclude Include="Engine\spriteNode.h" />
+    <ClInclude Include="Engine\state.h" />
+    <ClInclude Include="Engine\stateIdentifiers.h" />
+    <ClInclude Include="Engine\stateStack.h" />
+    <ClInclude Include="Engine\titleState.h" />
+    <ClInclude Include="Engine\utility.h" />
     <ClInclude Include="Engine\world.h" />
   </ItemGroup>
   <ItemGroup>
