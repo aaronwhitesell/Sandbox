@@ -2,6 +2,7 @@
 #define PAUSE_STATE_H
 
 #include "state.h"
+#include "container.h"
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
@@ -10,7 +11,7 @@
 class PauseState : public State
 {
 public:
-							PauseState(StateStack& stack, Context context);
+							PauseState(StateStack&, Context);
 
 	virtual void			draw();
 	virtual bool			update(sf::Time);
@@ -20,7 +21,7 @@ public:
 private:
 	sf::Sprite				mBackgroundSprite;
 	sf::Text				mPausedText;
-	sf::Text				mInstructionText;
+	GUI::Container			mGUIContainer;
 };
 
 #endif
