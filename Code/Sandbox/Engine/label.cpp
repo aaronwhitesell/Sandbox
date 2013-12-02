@@ -1,5 +1,4 @@
 #include "label.h"
-//#include "utility.h"
 
 #include <SFML/Graphics/RenderStates.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
