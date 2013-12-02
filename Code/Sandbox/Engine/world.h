@@ -26,19 +26,32 @@ namespace sf
 class World : private sf::NonCopyable
 {
 public:
-	explicit							World(sf::RenderWindow&);
+										World(sf::RenderWindow&, FontHolder&);
 
 	void								update(sf::Time);
 	void								draw();
 
 	CommandQueue&						getCommandQueue();
 
+	bool								hasAlivePlayer() const;
+	bool								hasPlayerReachedEnd() const;
+
 
 private:
 	void								loadTextures();
-	void								buildScene();
 	void								adaptPlayerPosition();
 	void								adaptPlayerVelocity();
+	void								handleCollisions();
+
+	void								buildScene();
+	void								addEnemies();
+	void								addEnemy(Aircraft::Type, float, float);
+	void								spawnEnemies();
+	void								destroyEntitiesOutsideView();
+	void								guideMissiles();
+	sf::FloatRect						getViewBounds() const;
+	sf::FloatRect						getBattlefieldBounds() const;
+
 
 private:
 	enum Layer
@@ -48,11 +61,26 @@ private:
 		LayerCount
 	};
 
+	struct SpawnPoint
+	{
+		SpawnPoint(Aircraft::Type type, float x, float y)
+		: type(type)
+		, x(x)
+		, y(y)
+		{
+		}
+
+		Aircraft::Type type;
+		float x;
+		float y;
+	};
+
 
 private:
 	sf::RenderWindow&					mWindow;
 	sf::View							mWorldView;
 	TextureHolder						mTextures;
+	FontHolder&							mFonts;
 	
 	SceneNode							mSceneGraph;
 	std::array<SceneNode*, LayerCount>	mSceneLayers;
@@ -62,6 +90,9 @@ private:
 	sf::Vector2f						mSpawnPosition;
 	float								mScrollSpeed;
 	Aircraft*							mPlayerAircraft;
+
+	std::vector<SpawnPoint>				mEnemySpawnPoints;
+	std::vector<Aircraft*>				mActiveEnemies;
 };
 
 #endif

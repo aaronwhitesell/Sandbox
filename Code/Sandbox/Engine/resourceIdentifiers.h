@@ -16,6 +16,13 @@ namespace Textures
 	{
 		Eagle,
 		Raptor,
+		Avenger,
+		Bullet,
+		Missile,
+		HealthRefill,
+		MissileRefill,
+		FireSpread,
+		FireRate,
 		Desert,
 		TitleScreen,
 		ButtonNormal,
