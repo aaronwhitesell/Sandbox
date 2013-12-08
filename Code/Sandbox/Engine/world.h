@@ -6,8 +6,9 @@
 #include "sceneNode.h"
 #include "spriteNode.h"
 #include "aircraft.h"
-#include "CommandQueue.h"
-#include "Command.h"
+#include "commandQueue.h"
+#include "command.h"
+#include "bloomEffect.h"
 
 #include <SFML/System/NonCopyable.hpp>
 #include <SFML/Graphics/View.hpp>
@@ -20,13 +21,13 @@
 // Forward declaration
 namespace sf
 {
-	class RenderWindow;
+	class RenderTarget;
 }
 
 class World : private sf::NonCopyable
 {
 public:
-										World(sf::RenderWindow&, FontHolder&);
+										World(sf::RenderTarget&, FontHolder&);
 
 	void								update(sf::Time);
 	void								draw();
@@ -57,7 +58,8 @@ private:
 	enum Layer
 	{
 		Background,
-		Air,
+		LowerAir,
+		UpperAir,
 		LayerCount
 	};
 
@@ -77,7 +79,8 @@ private:
 
 
 private:
-	sf::RenderWindow&					mWindow;
+	sf::RenderTarget&					mTarget;
+	sf::RenderTexture					mSceneTexture;
 	sf::View							mWorldView;
 	TextureHolder						mTextures;
 	FontHolder&							mFonts;
@@ -93,6 +96,8 @@ private:
 
 	std::vector<SpawnPoint>				mEnemySpawnPoints;
 	std::vector<Aircraft*>				mActiveEnemies;
+
+	BloomEffect							mBloomEffect;
 };
 
 #endif

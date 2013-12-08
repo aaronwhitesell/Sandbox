@@ -5,8 +5,9 @@
 // Forward declaration of SFML classes
 namespace sf
 {
-		class Texture;
-		class Font;
+	class Texture;
+	class Font;
+	class Shader;
 }
 
 // Resource ID for sf::Texture
@@ -14,20 +15,24 @@ namespace Textures
 {
 	enum ID
 	{
-		Eagle,
-		Raptor,
-		Avenger,
-		Bullet,
-		Missile,
-		HealthRefill,
-		MissileRefill,
-		FireSpread,
-		FireRate,
-		Desert,
+		Entities,
+		Jungle,
 		TitleScreen,
-		ButtonNormal,
-		ButtonSelected,
-		ButtonPressed
+		Buttons,
+		Explosion,
+		Particle,
+		FinishLine,
+	};
+}
+
+namespace Shaders
+{
+	enum ID
+	{
+		BrightnessPass,
+		DownSamplePass,
+		GaussianBlurPass,
+		AddPass,
 	};
 }
 
@@ -46,5 +51,6 @@ class ResourceHolder;
 
 typedef ResourceHolder<sf::Texture, Textures::ID>	TextureHolder;
 typedef ResourceHolder<sf::Font, Fonts::ID>			FontHolder;
+typedef ResourceHolder<sf::Shader, Shaders::ID>		ShaderHolder;
 
 #endif

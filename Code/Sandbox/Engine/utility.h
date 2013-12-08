@@ -13,12 +13,15 @@ namespace sf
 	class Text;
 }
 
+class Animation;
+
 // Convert enumerators to strings
-std::string toString(sf::Keyboard::Key key);
+std::string		toString(sf::Keyboard::Key key);
 
 // Call setOrigin() with the center of the object
-void centerOrigin(sf::Sprite&);
-void centerOrigin(sf::Text&);
+void			centerOrigin(sf::Sprite&);
+void			centerOrigin(sf::Text&);
+void			centerOrigin(Animation& animation);
 
 // Degree/radian conversion
 float			toDegree(float radian);

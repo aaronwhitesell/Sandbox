@@ -6,6 +6,7 @@
 #include "resourceIdentifiers.h"
 #include "projectile.h"
 #include "textNode.h"
+#include "animation.h"
 
 #include <SFML/Graphics/Sprite.hpp>
 
@@ -28,13 +29,14 @@ public:
 	virtual void			updateCurrent(sf::Time, CommandQueue&);
 	virtual unsigned int	getCategory() const;
 	virtual sf::FloatRect	getBoundingRect() const;
+	virtual void			remove();
 	virtual bool			isMarkedForRemoval() const;
 	bool					isAllied() const;
 	float					getMaxSpeed() const;
 
 	void					increaseFireRate();
 	void					increaseSpread();
-	void					collectMissiles(unsigned int count);
+	void					collectMissiles(unsigned int);
 
 	void					fire();
 	void					launchMissile();
@@ -51,17 +53,20 @@ private:
 	void					createPickup(SceneNode& , const TextureHolder&) const;
 
 	void					updateTexts();
+	void					updateRollAnimation();
 	
 
 private:
 	Type					mType;
 	sf::Sprite				mSprite;
+	Animation				mExplosion;
 	Command					mFireCommand;
 	Command					mMissileCommand;
 	sf::Time				mFireCountdown;
 	bool					mIsFiring;
 	bool					mIsLaunchingMissile;
-	bool					mIsMarkedForRemoval;
+	bool 					mShowExplosion;
+	bool					mSpawnedPickup;
 
 	int						mFireRateLevel;
 	int						mSpreadLevel;

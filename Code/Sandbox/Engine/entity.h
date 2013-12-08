@@ -7,7 +7,7 @@
 class Entity : public SceneNode
 {
 public:
-	explicit				Entity(int hitpoints);
+	explicit				Entity(int);
 
 	void					setVelocity(sf::Vector2f);
 	void					setVelocity(float, float);
@@ -19,6 +19,7 @@ public:
 	void					repair(int);
 	void					damage(int);
 	void					destroy();
+	virtual void			remove();
 	virtual bool			isDestroyed() const;
 
 

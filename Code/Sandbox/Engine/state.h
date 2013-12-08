@@ -26,6 +26,7 @@ public:
 	struct Context
 	{
 							Context(sf::RenderWindow&, TextureHolder&, FontHolder&, Player&);
+
 		sf::RenderWindow*	window;
 		TextureHolder*		textures;
 		FontHolder*			fonts;

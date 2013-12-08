@@ -75,21 +75,26 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Engine\aircraft.cpp" />
+    <ClCompile Include="Engine\animation.cpp" />
     <ClCompile Include="Engine\application.cpp" />
+    <ClCompile Include="Engine\bloomEffect.cpp" />
     <ClCompile Include="Engine\button.cpp" />
     <ClCompile Include="Engine\command.cpp" />
     <ClCompile Include="Engine\commandQueue.cpp" />
     <ClCompile Include="Engine\component.cpp" />
     <ClCompile Include="Engine\container.cpp" />
     <ClCompile Include="Engine\dataTables.cpp" />
+    <ClCompile Include="Engine\emitterNode.cpp" />
     <ClCompile Include="Engine\entity.cpp" />
     <ClCompile Include="Engine\gameState.cpp" />
     <ClCompile Include="Engine\gameOverState.cpp" />
     <ClCompile Include="Engine\label.cpp" />
     <ClCompile Include="Engine\menuState.cpp" />
+    <ClCompile Include="Engine\particleNode.cpp" />
     <ClCompile Include="Engine\pauseState.cpp" />
     <ClCompile Include="Engine\pickup.cpp" />
     <ClCompile Include="Engine\player.cpp" />
+    <ClCompile Include="Engine\postEffect.cpp" />
     <ClCompile Include="Engine\projectile.cpp" />
     <ClCompile Include="Engine\sceneNode.cpp" />
     <ClCompile Include="Engine\settingsState.cpp" />
@@ -104,7 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\aircraft.h" />
+    <ClInclude Include="Engine\animation.h" />
     <ClInclude Include="Engine\application.h" />
+    <ClInclude Include="Engine\bloomEffect.h" />
     <ClInclude Include="Engine\button.h" />
     <ClInclude Include="Engine\category.h" />
     <ClInclude Include="Engine\command.h" />
@@ -112,14 +119,18 @@
     <ClInclude Include="Engine\component.h" />
     <ClInclude Include="Engine\container.h" />
     <ClInclude Include="Engine\dataTables.h" />
+    <ClInclude Include="Engine\emitterNode.h" />
     <ClInclude Include="Engine\entity.h" />
     <ClInclude Include="Engine\gameState.h" />
     <ClInclude Include="Engine\gameOverState.h" />
     <ClInclude Include="Engine\label.h" />
     <ClInclude Include="Engine\menuState.h" />
+    <ClInclude Include="Engine\particle.h" />
+    <ClInclude Include="Engine\particleNode.h" />
     <ClInclude Include="Engine\pauseState.h" />
     <ClInclude Include="Engine\pickup.h" />
     <ClInclude Include="Engine\player.h" />
+    <ClInclude Include="Engine\postEffect.h" />
     <ClInclude Include="Engine\projectile.h" />
     <ClInclude Include="Engine\resourceHolder.h" />
     <ClInclude Include="Engine\resourceIdentifiers.h" />
