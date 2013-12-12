@@ -3,7 +3,7 @@
 
 #include "component.h"
 #include "resourceIdentifiers.h"
-#include "resourceHolder.h"
+#include "state.h"
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
@@ -32,7 +32,7 @@ public:
 	};
 
 public:
-							Button(const FontHolder&, const TextureHolder&);
+							Button(State::Context context);
 								
 	void					setCallback(Callback);
 	void					setText(const std::string&);
@@ -57,6 +57,7 @@ private:
 	sf::Sprite				mSprite;
 	sf::Text				mText;
 	bool					mIsToggle;			// The button remains pressed (active) until explicitly changed (supports poll method).
+	SoundPlayer&			mSounds;
 };
 
 }

@@ -5,6 +5,8 @@
 #include "resourceIdentifiers.h"
 #include "player.h"
 #include "stateStack.h"
+#include "musicPlayer.h"
+#include "soundPlayer.h"
 
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
@@ -34,6 +36,8 @@ private:
 	FontHolder				mFonts;
 	Player					mPlayer;
 
+	MusicPlayer				mMusic;
+	SoundPlayer				mSounds;
 	StateStack				mStateStack;
 
 	sf::Text				mStatisticsText;

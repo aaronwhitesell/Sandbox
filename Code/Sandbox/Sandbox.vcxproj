@@ -90,6 +90,7 @@
     <ClCompile Include="Engine\gameOverState.cpp" />
     <ClCompile Include="Engine\label.cpp" />
     <ClCompile Include="Engine\menuState.cpp" />
+    <ClCompile Include="Engine\musicPlayer.cpp" />
     <ClCompile Include="Engine\particleNode.cpp" />
     <ClCompile Include="Engine\pauseState.cpp" />
     <ClCompile Include="Engine\pickup.cpp" />
@@ -98,6 +99,8 @@
     <ClCompile Include="Engine\projectile.cpp" />
     <ClCompile Include="Engine\sceneNode.cpp" />
     <ClCompile Include="Engine\settingsState.cpp" />
+    <ClCompile Include="Engine\soundNode.cpp" />
+    <ClCompile Include="Engine\soundPlayer.cpp" />
     <ClCompile Include="Engine\spriteNode.cpp" />
     <ClCompile Include="Engine\state.cpp" />
     <ClCompile Include="Engine\stateStack.cpp" />
@@ -125,6 +128,7 @@
     <ClInclude Include="Engine\gameOverState.h" />
     <ClInclude Include="Engine\label.h" />
     <ClInclude Include="Engine\menuState.h" />
+    <ClInclude Include="Engine\musicPlayer.h" />
     <ClInclude Include="Engine\particle.h" />
     <ClInclude Include="Engine\particleNode.h" />
     <ClInclude Include="Engine\pauseState.h" />
@@ -136,6 +140,8 @@
     <ClInclude Include="Engine\resourceIdentifiers.h" />
     <ClInclude Include="Engine\sceneNode.h" />
     <ClInclude Include="Engine\settingsState.h" />
+    <ClInclude Include="Engine\soundNode.h" />
+    <ClInclude Include="Engine\soundPlayer.h" />
     <ClInclude Include="Engine\spriteNode.h" />
     <ClInclude Include="Engine\state.h" />
     <ClInclude Include="Engine\stateIdentifiers.h" />

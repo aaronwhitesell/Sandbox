@@ -12,6 +12,7 @@ class PauseState : public State
 {
 public:
 							PauseState(StateStack&, Context);
+							~PauseState();
 
 	virtual void			draw();
 	virtual bool			update(sf::Time);

@@ -40,6 +40,7 @@ public:
 
 	void					fire();
 	void					launchMissile();
+	void					playLocalSound(CommandQueue&, SoundEffect::ID);
 
 
 private:
@@ -66,6 +67,7 @@ private:
 	bool					mIsFiring;
 	bool					mIsLaunchingMissile;
 	bool 					mShowExplosion;
+	bool					mPlayedExplosionSound;
 	bool					mSpawnedPickup;
 
 	int						mFireRateLevel;

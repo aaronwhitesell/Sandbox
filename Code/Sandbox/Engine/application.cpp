@@ -13,11 +13,13 @@
 const sf::Time Application::TimePerFrame = sf::seconds(1.f/60.f);
 
 Application::Application()
-: mWindow(sf::VideoMode(1024, 768), "Graphics", sf::Style::Close)
+: mWindow(sf::VideoMode(1024, 768), "Audio", sf::Style::Close)
 , mTextures()
 , mFonts()
 , mPlayer()
-, mStateStack(State::Context(mWindow, mTextures, mFonts, mPlayer))
+, mMusic()
+, mSounds()
+, mStateStack(State::Context(mWindow, mTextures, mFonts, mPlayer, mMusic, mSounds))
 , mStatisticsText()
 , mStatisticsUpdateTime()
 , mStatisticsNumFrames(0)
@@ -35,6 +37,8 @@ Application::Application()
 
 	registerStates();
 	mStateStack.pushState(States::Title);
+
+	mMusic.setVolume(25.f);
 }
 
 void Application::run()
